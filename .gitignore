@@ -1,0 +1,22 @@
+# build dir
+build/
+
+#python files
+*.pyc
+
+#Qt creator
+*.creator
+*.creator.user
+*.config
+*.files
+*.includes
+
+#conan files
+conanbuildinfo*
+conaninfo.txt
+conanenv.txt
+conan_imports_manifest.txt
+
+#waf files
+.waf-*
+.lock-waf*

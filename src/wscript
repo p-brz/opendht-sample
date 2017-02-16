@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from os import path
+
+def build(bld):
+    bld.program(
+        target   = 'program',
+        source   = glob(bld, '*.cpp'),
+        includes = ['.'],
+        use      = ['opendht'])
+
+def glob(bld, *k, **kw):
+    '''Helper to execute an ant_glob search.
+        See documentation at: https://waf.io/apidocs/Node.html?#waflib.Node.Node.ant_glob
+    '''
+
+    return bld.path.ant_glob(*k, **kw)
